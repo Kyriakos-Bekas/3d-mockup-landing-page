@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "AvenirLTBold";
+	src: url(./fonts/AvenirLTStd-Heavy.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "AvenirLTRegular";
+	src: url(./fonts/AvenirLTStd-Book.otf) format("opentype");
+}
+
+body {
+	background: rgb(11, 131, 183);
+	background: radial-gradient(
+		circle,
+		rgba(11, 131, 183, 1) 0%,
+		rgba(4, 105, 149, 1) 100%
+	);
+	color: #ffffff;
+	display: grid;
+	grid-template-columns: 5% 1fr 1.5fr 5%;
+	min-height: 100vh;
+}
+
+.text {
+	grid-column: 2/3;
+	place-self: center;
+	margin: 2rem;
+}
+
+.text h1 {
+	font-family: "AvenirLTBold", sans-serif;
+	font-size: 1.6rem;
+	margin-bottom: 1.8rem;
+}
+
+.text p {
+	font-family: "AvenirLTRegular", sans-serif;
+	margin-bottom: 2rem;
+}
+
+button {
+	padding: 0.6rem 1.2rem;
+	background-color: #000000;
+	font-family: "AvenirLTRegular", sans-serif;
+	font-size: 1rem;
+	color: #ffffff;
+	border: none;
+	border-radius: 10pt;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+button:hover {
+	transform: scale(0.95);
+}
+
+.mockup-container {
+	grid-column: 3/4;
+	place-self: center;
+	margin: 1rem;
+}
+
+.mockup,
+.mockup img {
+	transition: all ease 1.6s;
+	transform-style: preserve-3d;
+}
+
+.mockup {
+	position: relative;
+	width: 295px;
+	height: 579px;
+}
+
+.mockup img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	user-select: none;
+	/* Disable image dragging */
+	pointer-events: none;
+}
+
+.mockup:hover {
+	transform: perspective(1000px) rotateX(40deg) rotateY(20deg) rotateZ(-20deg)
+		scale(0.8);
+}
+
+.mockup:hover img.low {
+	transform: translateX(15px);
+}
+
+.mockup:hover img.middle {
+	transform: translateX(30px);
+}
+
+.mockup:hover img.high {
+	transform: translateX(40px);
+}
+
+.mockup:hover img.top {
+	transform: translateX(50px);
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		padding: 2.4rem 0 3.8rem 0;
+		grid-template-columns: 5% 1fr 5%;
+	}
+
+	.text,
+	.mockup-container {
+		grid-column: 2/3;
+	}
+
+	.text {
+		text-align: center;
+	}
+
+	.mockup:hover {
+		transform: perspective(1000px) rotateX(40deg) rotateY(20deg) rotateZ(-20deg)
+			scale(0.6);
+	}
+}
