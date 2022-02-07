@@ -38,6 +38,8 @@ git clone https://github.com/Kyriakos-Bekas/3d-mockup-landing-page.git
 
 3. Download the source code: _Code_ >> _Download ZIP_
 
+![Download Code as ZIP Visual Instructions](https://user-images.githubusercontent.com/74660002/152875739-5b6a15f1-afcd-49b7-b0d9-2d37ce6df56c.png)
+
 ## Credit Note
 
 No copyright infringement intended. If you see a problem with this repository, please [contact me](mailto:kyriakosbekas00@gmail.com).
